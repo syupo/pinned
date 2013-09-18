@@ -94,6 +94,8 @@ public class ScrollViewWithPinnedView extends ScrollView {
 		} else {
 			mPinnedView.layout(0, mPinnedViewOriginalTop, mPinnedViewWidth, mPinnedViewOriginalTop + mPinnedViewHeight);
 		}
+		
+		mPinnedView.bringToFront();
 	}
 
 	@Override
