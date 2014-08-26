@@ -16,7 +16,7 @@ Android实现 某一个区域 的 Pin效果
 示例：
 -------------
 
-布局文件example_layout.xml
+* 布局文件example_layout.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -57,7 +57,7 @@ Android实现 某一个区域 的 Pin效果
  </LinearLayout>
 ```
 
-Activity Class ExampleActivity.java
+* Activity Class ExampleActivity.java
 ```android
 onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
