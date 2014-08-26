@@ -3,10 +3,21 @@ pinned
 
 Android实现 某一个区域 的 Pin效果
 
-实现原理：
+原理图解：
+-------------
 ![image](https://github.com/syupo/pinned/raw/master/sketch/pinned_sketch.png)
 
-1.定义布局文件
+代码集成：
+-------------
++ 下载或复制ScrollViewWithPinnedView类添加为自定义控件类
++ 在布局文件中引入该控件
++ 在Activity的OnCreate方法中设置该控件的pinned区域
+
+示例：
+-------------
+
+布局文件example_layout.xml
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
@@ -17,7 +28,6 @@ Android实现 某一个区域 的 Pin效果
         android:id="@+id/main_scroll"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
-        ...
         
         <LinearLayout
             android:id="@+id/pinned"
@@ -42,19 +52,26 @@ Android实现 某一个区域 的 Pin效果
                 android:text="pinned view here" />
         </LinearLayout>
         
-        ...
-        
     </your.company.ScrollViewWithPinnedView>
 
-</LinearLayout>
+ </LinearLayout>
+```
 
-2.在Activity onCreate方法中启用Pin
-((ScrollViewWithPinnedView)findViewById(R.id.yourscrollid)).setPinnedView(this.findViewById(R.id.pinned));
+Activity Class ExampleActivity.java
+```android
+onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.example_layout);
+    
+    mScrollWithPinnedView = (ScrollViewWithPinnedView)findViewById(R.id.yourscrollid))
+    mScrollWithPinnedView.setPinnedView(this.findViewById(R.id.pinned));
+}
+```
 
 License
 ======
 
-Copyright 2013 syupo.lee
+Copyright 2014 Syupo
 
 Licensed under the Apache License, Version 2.0 (the "License"); 
 you may not use this file except in compliance with the License. You may obtain a copy of the License at
