@@ -1,11 +1,13 @@
 pinned
 ======
 
-Android实现 某一个区域 的 Pin效果
+Android实现 某一个区域 的 Pinned效果
 
-<del>原理图解：</del>
+功能说明：
 -------------
-<del>https://github.com/syupo/pinned/raw/master/sketch/pinned_sketch.png</del>
+实现向上滚动屏幕到一定位置时让某个视图固定在此处，而向下滚动屏幕到此处时再恢复到原来的视图。
+
+<font style="color:#f00">注意：</font> 布局文件中 ScrollView 的第一个子View必须使用FrameLayout
 
 代码集成：
 -------------
@@ -16,63 +18,14 @@ Android实现 某一个区域 的 Pin效果
 
 示例：
 -------------
+请参看share.pinned.simple
 
-* 布局文件example_layout.xml
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
-    
-    <fnly.share.pinned.ScrollViewPinnedImpl
-        android:id="@+id/main_scroll"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-        
-        <LinearLayout
-            android:id="@+id/pinned"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="#ffacacac" >
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="pinned view here" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="awesome" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="pinned view here" />
-        </LinearLayout>
-        
-    </fnly.share.pinned.ScrollViewPinnedImpl>
-
- </LinearLayout>
-```
-
-* Activity Class ExampleActivity.java
-```android
-onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.example_layout);
-    
-    mScrollWithPinnedView = (ScrollViewWithPinnedView)findViewById(R.id.yourscrollid))
-    mScrollWithPinnedView.setPinnedView(this.findViewById(R.id.pinned));
-}
-```
 
 License
 ======
 
-Copyright 2014 Syupo
+Copyright 2014-2015 Syupo
 
 Licensed under the Apache License, Version 2.0 (the "License"); 
 you may not use this file except in compliance with the License. You may obtain a copy of the License at
