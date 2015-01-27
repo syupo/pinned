@@ -3,15 +3,16 @@ pinned
 
 Android实现 某一个区域 的 Pin效果
 
-原理图解：
+<del>原理图解：</del>
 -------------
-![image](https://github.com/syupo/pinned/raw/master/sketch/pinned_sketch.png)
+<del>https://github.com/syupo/pinned/raw/master/sketch/pinned_sketch.png</del>
 
 代码集成：
 -------------
-+ 下载或复制ScrollViewWithPinnedView类添加为自定义控件类
-+ 在布局文件中引入该控件
-+ 在Activity的OnCreate方法中设置该控件的pinned区域
++ git clone https://github.com/syupo/pinned.git
++ import maven project in Eclipse. &lt;your git repository path&gt;/pinned/share.pinned
++ reference this project as a android lib project.
++ make sure a frame layout is your first child of scroll view. 
 
 示例：
 -------------
@@ -24,7 +25,7 @@ Android实现 某一个区域 的 Pin效果
     android:layout_height="fill_parent"
     android:orientation="vertical" >
     
-    <your.company.ScrollViewWithPinnedView
+    <fnly.share.pinned.ScrollViewPinnedImpl
         android:id="@+id/main_scroll"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
@@ -52,7 +53,7 @@ Android实现 某一个区域 的 Pin效果
                 android:text="pinned view here" />
         </LinearLayout>
         
-    </your.company.ScrollViewWithPinnedView>
+    </fnly.share.pinned.ScrollViewPinnedImpl>
 
  </LinearLayout>
 ```
