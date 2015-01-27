@@ -2,7 +2,6 @@ package fnly.share.pinned;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.FrameLayout;
@@ -15,9 +14,11 @@ import android.widget.ScrollView;
  * on screen at a position when you scroll the screen use a {@link ScrollView}.
  * </p>
  * 
+ * @author syupo <syupo@gmail.com>
+ * 
  */
 public class ScrollViewPinnedImpl extends ScrollView {
-	private static final String TAG = "ScrollViewPinnedImpl";
+	// private static final String TAG = "Pinned";
 
 	private View mPinnedView;
 	private FrameLayout mPinnedViewParent;
@@ -82,7 +83,7 @@ public class ScrollViewPinnedImpl extends ScrollView {
 
 		int offY = t;
 
-		Log.d(TAG, "scroll y:" + offY);
+		// Log.d(TAG, "scroll y:" + offY);
 
 		if (oldt - t < 0) {
 			// scroll up
@@ -132,8 +133,8 @@ public class ScrollViewPinnedImpl extends ScrollView {
 		int height = view.getMeasuredHeight();
 		view.layout(left, top, left + width, top + height);
 
-		Log.d(TAG, "pinned location top:" + top);
-		Log.d(TAG, "pinned location left:" + left);
+		// Log.d(TAG, "pinned location top:" + top);
+		// Log.d(TAG, "pinned location left:" + left);
 	}
 
 	/**
