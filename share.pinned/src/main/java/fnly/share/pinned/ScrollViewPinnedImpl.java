@@ -142,7 +142,7 @@ public class ScrollViewPinnedImpl extends ScrollView {
 	 * 
 	 * @return container
 	 */
-	public FrameLayout getPinnerContainer() {
+	public FrameLayout getPinnedViewContainer() {
 		return mPinnedViewParent;
 	}
 
@@ -154,7 +154,7 @@ public class ScrollViewPinnedImpl extends ScrollView {
 	 *            a view that will be fixed a location.
 	 * @return this instance
 	 */
-	public ScrollViewPinnedImpl setPinner(View view) {
+	public ScrollViewPinnedImpl setPinnedView(View view) {
 		mPinnedViewParent.addView(view);
 		view.setVisibility(View.INVISIBLE);
 		mPinnedView = view;
@@ -171,7 +171,7 @@ public class ScrollViewPinnedImpl extends ScrollView {
 	 *            a top position, relative to parent
 	 * @return this instance
 	 */
-	public ScrollViewPinnedImpl markPinnerStartLocation(int left, int top) {
+	public ScrollViewPinnedImpl markPinnedViewStartLocation(int left, int top) {
 		mPinnedViewLocation = new int[2];
 		mPinnedViewLocation[0] = top;
 		mPinnedViewLocation[1] = left;
@@ -186,7 +186,7 @@ public class ScrollViewPinnedImpl extends ScrollView {
 	 *            a child of scroll view'id
 	 * @return this instance
 	 */
-	public ScrollViewPinnedImpl markPinnerStartLocationRef(int id) {
+	public ScrollViewPinnedImpl markPinnedViewStartLocationRef(int id) {
 		mPinnedViewRefView = mPinnedViewParent.findViewById(id);
 		mPinnedViewLocation = new int[2];
 		return this;
