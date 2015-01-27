@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <fnly.share.pinned.ScrollViewPinnedImpl
+        android:id="@+id/main_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <include layout="@layout/view_scrollview_item"/>
+        </FrameLayout>
+    </fnly.share.pinned.ScrollViewPinnedImpl>
+
+</LinearLayout>
