@@ -3,6 +3,8 @@ pinned
 
 Android实现 某一个区域 的 Pinned效果
 
+![image](https://github.com/syupo/pinned/raw/master/sketch/pinned_picture.png)
+
 功能说明：
 -------------
 实现向上滚动屏幕到一定位置时让某个视图固定在此处，而向下滚动屏幕到此处时再恢复到原来的视图。
